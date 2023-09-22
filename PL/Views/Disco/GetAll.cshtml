@@ -1,0 +1,11 @@
+﻿@model ML.Disco
+@{
+    ViewBag.Title = "GetAll";
+}
+
+<h2>GetAll</h2>
+
+@foreach(ML.Disco disco in Model.Discos)
+            {
+    <p>@disco.Titulo</p>
+            } 

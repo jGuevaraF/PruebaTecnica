@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JGuevaraPruebaTecnicaModelStoreContainer" CdmEntityContainer="JGuevaraPruebaTecnicaEntities">
+    <EntitySetMapping Name="Artistas">
+      <EntityTypeMapping TypeName="JGuevaraPruebaTecnicaModel.Artista">
+        <MappingFragment StoreEntitySet="Artista">
+          <ScalarProperty Name="IdArtista" ColumnName="IdArtista" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Discoes">
+      <EntityTypeMapping TypeName="JGuevaraPruebaTecnicaModel.Disco">
+        <MappingFragment StoreEntitySet="Disco">
+          <ScalarProperty Name="IdDisco" ColumnName="IdDisco" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Duracion" ColumnName="Duracion" />
+          <ScalarProperty Name="Anio" ColumnName="Anio" />
+          <ScalarProperty Name="Ventas" ColumnName="Ventas" />
+          <ScalarProperty Name="Disponibilidad" ColumnName="Disponibilidad" />
+          <ScalarProperty Name="IdArtista" ColumnName="IdArtista" />
+          <ScalarProperty Name="IdGenero" ColumnName="IdGenero" />
+          <ScalarProperty Name="IdDistribuidora" ColumnName="IdDistribuidora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Distribuidoras">
+      <EntityTypeMapping TypeName="JGuevaraPruebaTecnicaModel.Distribuidora">
+        <MappingFragment StoreEntitySet="Distribuidora">
+          <ScalarProperty Name="IdDistribuidora" ColumnName="IdDistribuidora" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GeneroMusicals">
+      <EntityTypeMapping TypeName="JGuevaraPruebaTecnicaModel.GeneroMusical">
+        <MappingFragment StoreEntitySet="GeneroMusical">
+          <ScalarProperty Name="IdGenero" ColumnName="IdGenero" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="DiscoAdd" FunctionName="JGuevaraPruebaTecnicaModel.Store.DiscoAdd" />
+    <FunctionImportMapping FunctionImportName="DiscoDelete" FunctionName="JGuevaraPruebaTecnicaModel.Store.DiscoDelete" />
+    <FunctionImportMapping FunctionImportName="DiscoGetAll" FunctionName="JGuevaraPruebaTecnicaModel.Store.DiscoGetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="JGuevaraPruebaTecnicaModel.DiscoGetAll_Result">
+          <ScalarProperty Name="IdDisco" ColumnName="IdDisco" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Duracion" ColumnName="Duracion" />
+          <ScalarProperty Name="Anio" ColumnName="Anio" />
+          <ScalarProperty Name="Ventas" ColumnName="Ventas" />
+          <ScalarProperty Name="Disponibilidad" ColumnName="Disponibilidad" />
+          <ScalarProperty Name="IdArtista" ColumnName="IdArtista" />
+          <ScalarProperty Name="ArtistaNombre" ColumnName="ArtistaNombre" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="IdGenero" ColumnName="IdGenero" />
+          <ScalarProperty Name="GeneroNombre" ColumnName="GeneroNombre" />
+          <ScalarProperty Name="IdDistribuidora" ColumnName="IdDistribuidora" />
+          <ScalarProperty Name="DistribuidoraNombre" ColumnName="DistribuidoraNombre" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DiscoGetById" FunctionName="JGuevaraPruebaTecnicaModel.Store.DiscoGetById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="JGuevaraPruebaTecnicaModel.DiscoGetById_Result">
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Duracion" ColumnName="Duracion" />
+          <ScalarProperty Name="Anio" ColumnName="Anio" />
+          <ScalarProperty Name="Ventas" ColumnName="Ventas" />
+          <ScalarProperty Name="Disponibilidad" ColumnName="Disponibilidad" />
+          <ScalarProperty Name="ArtistaNombre" ColumnName="ArtistaNombre" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="GeneroNombre" ColumnName="GeneroNombre" />
+          <ScalarProperty Name="DistribuidoraNombre" ColumnName="DistribuidoraNombre" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DiscoUpdate" FunctionName="JGuevaraPruebaTecnicaModel.Store.DiscoUpdate" />
+  </EntityContainerMapping>
+</Mapping>
